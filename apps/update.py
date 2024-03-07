@@ -3,7 +3,7 @@ import platform
 if platform.system() == "Windows":
     clean = "cls"
     syst = "| base system: WINDOWS |"
-elif platform.system() == "Linux":
+elif platform.system() == "Linux" or platform.system() == "Darwin":
     clean = "clear"
     syst = "| base system: LINUX   |"
 print("----------------------------------------------------------------------")
