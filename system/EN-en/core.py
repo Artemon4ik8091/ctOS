@@ -20,7 +20,7 @@ time.sleep(0.3)
 if platform.system() == "Windows":
     clean = "cls"
     syst = "| base system: WINDOWS |"
-elif platform.system() == "Linux":
+elif platform.system() == "Linux" or platform.system() == "Darwin":
     clean = "clear"
     syst = "| base system: LINUX   |"                    #основа
 settings = open("configs/build.cfg", "r")
@@ -72,6 +72,7 @@ if (activ_key != "true"):
         print("Key incorrect.")
         print("You using not activated system, please contact at developer for give activation key.")
         input("Press Enter to continue..")
+        start = "true"
 elif(activ_key == "true"):
     start = "true"
     key = 1
