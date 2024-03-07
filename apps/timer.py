@@ -2,20 +2,18 @@
 import os
 import time
 from datetime import datetime
+import platform
 com = str("")
 buffer1 = ""
 buffer2 = 0
 start = "true"
 clean = ""
-settings = open("configs/system.cfg", "r")
-buffer = settings.read()
-if(buffer == "linux\n"):
-    clean = "clear"
-    syst = "| base system: LINUX   |"
-if(buffer == "windows\n"):
+if platform.system() == "Windows":
     clean = "cls"
     syst = "| base system: WINDOWS |"
-settings.close()
+elif platform.system() == "Linux":
+    clean = "clear"
+    syst = "| base system: LINUX   |"
 os.system(clean)
 buffer = int(input("Enter time(in seconds): "))
 os.system(clean)

@@ -2,6 +2,7 @@
 import os
 import time
 from datetime import datetime
+import platform
 com = str("")
 start = "true"
 user = "User"
@@ -11,15 +12,12 @@ fcheck = open("configs/oobe.cfg", "r")
 check = fcheck.read()
 fcheck.close()
 if(check == "true"):
-    settings = open("configs/system.cfg", "r")                  #base
-    buffer = settings.read()
-    if(buffer == "linux\n"):
-        clean = "clear"
-        syst = "| base system: LINUX   |"
-    if(buffer == "windows\n"):
+    if platform.system() == "Windows":
         clean = "cls"
         syst = "| base system: WINDOWS |"
-    settings.close()                                #основа
+    elif platform.system() == "Linux":
+        clean = "clear"
+        syst = "| base system: LINUX   |"                              #основа
     os.system(clean)
     print("Введи информацию о себе:")
     user = open("configs/user.cfg", "w")

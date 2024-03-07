@@ -9,7 +9,7 @@ com = str("")
 buffer1 = ""
 buffer2 = ""
 start = "true"
-ver="0.6.3" #set by the maintainer
+ver= "0.7.1" #set by the maintainer
 import os
 
 def get_cpu_model_name_windows():
@@ -45,4 +45,5 @@ print("██║░░╚═╝░░░██║░░░██║░░██�
 print("██║░░██╗░░░██║░░░██║░░██║░╚═══██╗", "Kernel:", platform.version())
 print("╚█████╔╝░░░██║░░░╚█████╔╝██████╔╝", "Uptime:", get_uptime())
 print("░╚════╝░░░░╚═╝░░░░╚════╝░╚═════╝░", "Local IP:", local_ip)
+print("By Aiden Pearce and other developers with love <3")
 print("")

@@ -5,16 +5,13 @@ def fix_y():
     file = open("configs/lang.cfg", "w")
     file.write("eng")
     file.close()
-    file = open("configs/system.cfg", "w")
-    file.write("linux\n")
-    file.close()
     
 def fix_n():
     return "Exiting..."
 
 print("This script fixing ctOS.")
 work = input("Fix? (Y/n) ")
-if (work == "n" or work == "R"):
+if (work == "n" or work == "N"):
     fix_n()
 if (work == "y" or work == "Y"):
     fix_y()
