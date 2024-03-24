@@ -9,7 +9,7 @@ com = str("")
 buffer1 = ""
 buffer2 = ""
 start = "true"
-ver= "0.8.1" #set by the maintainer
+ver= "0.9" #set by the maintainer
 import os
 
 def get_cpu_model_name_windows():

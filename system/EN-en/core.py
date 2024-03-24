@@ -98,6 +98,11 @@ while(start == "true"):
     buffer2 = ""
     count += 1
     comlog.writelines(str(times) + ": " + com + "\n")   #Глав. строка
+    if (com == "apct"):
+        if(syst == "| base system: LINUX   |"):
+            os.system("python3 system/apct.py")
+        if(syst == "| base system: WINDOWS |"):
+            os.system("python system/apct.py")
     if (com == 'update'):
         if(syst == "| base system: LINUX   |"):
             os.system("python3 apps/update.py")
@@ -342,6 +347,7 @@ while(start == "true"):
         print("lang - Change language to Russian")
         print("pip - Enter command for pip")
         print("update - Updating your system to last version")
+        print("apct - package downloader")
         print("-----------                               ----------")
     if(com=="calc"):
         if(syst == "| base system: LINUX   |"):
